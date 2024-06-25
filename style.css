@@ -179,9 +179,139 @@ html {
    margin-left: 1.5rem;
 }
 
-
-
-
 .main-content {
    background-color: #e2e8f0;
+   padding: 3rem;
+   display: flex;
+}
+
+.content-container {
+   display: flex;
+   column-gap: 2rem;
+}
+
+
+.content-container .project h3, article > h3,  .inner-container-two .container > h3 {
+   font-size: 1.4rem;
+   color: black;
+   letter-spacing: .5px;
+   margin-bottom: 1rem;
+}
+
+.project-gallery {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+}
+
+.project-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   border-radius: .5rem;
+   position: relative;
+   background: #ffffff;
+   padding: 2.5rem;
+}
+
+.project-card::before {
+   content: "";
+   width: 2%;
+   border-top-left-radius: .5rem;
+   border-bottom-left-radius: .5rem;
+   position: absolute;
+   background-color: #F0B429;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.project-card p {
+   color: black;
+   font-size: 1.2rem;
+   line-height: 1.5;
+   margin-top: 2rem;
+}
+
+
+.project-card .project-icons {
+   display: flex;
+   column-gap: 1.5rem;
+   justify-content: flex-end;
+   margin-top: 1rem;
+}
+.project-card svg {
+   fill: black;
+   width: 2rem;
+   display: block;
+}
+
+
+/* .content-container article {
+   background-color: blue;
+} */
+
+.content-container article .container {
+   display: grid;
+   grid-template-rows: 1fr;
+}
+
+article .inner-container-one {
+   padding: 2rem 3rem;
+   background: white;
+   border-radius: .5rem;
+}
+
+article .inner-container-one p, article .inner-container-one h3 {
+   font-size: 1.1rem;
+   color: black;
+   line-height: 1.5;
+}
+
+article .inner-container-one > * {
+   padding: 1rem 0;
+   border-bottom: 1px solid black;
+}
+
+article .inner-container-one > div:first-child {
+   padding-top: 0;
+}
+
+
+
+.inner-container-two {
+   margin-top: 2rem;
+}
+
+.inner-container-two img {
+   width: 5rem;
+}
+
+.testimonials {
+   background-color: white;
+   padding: 1rem 2rem;
+   display: flex;
+   flex-direction: column;
+   row-gap: 2rem;
+}
+
+.testimonials .profile {
+   display: flex;
+   align-items: center;
+   column-gap: 2rem;
+}
+
+.notes {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   row-gap: .5rem;
+}
+
+.notes p:first-child {
+   font-weight: bold;
+}
+.notes p {
+   font-size: 1.2rem;
+   color: black;
 }
