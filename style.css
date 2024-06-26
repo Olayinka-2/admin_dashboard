@@ -68,7 +68,7 @@ html {
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 12rem 1fr;
-   height: 100%;
+   /* height: 100%; */
 }
 
 .header {
@@ -186,9 +186,31 @@ html {
 }
 
 .content-container {
-   display: flex;
-   column-gap: 2rem;
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   gap: 2rem;
 }
+
+.project {
+   grid-column: 1 / 2;
+   grid-row: 1/3;
+   display: flex;
+   flex-direction: column;
+}
+
+article {
+   grid-column: 2/3;
+   grid-row: 1/2;
+   display: flex;
+   flex-direction: column;
+}
+
+.inner-container-two {
+   grid-column:  2/3;
+   grid-row: 2/3;
+}
+
 
 
 .content-container .project h3, article > h3,  .inner-container-two .container > h3 {
@@ -202,6 +224,7 @@ html {
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 2rem;
+   flex-grow: 1;
 }
 
 .project-card {
@@ -246,12 +269,8 @@ html {
    display: block;
 }
 
-
-/* .content-container article {
-   background-color: blue;
-} */
-
 .content-container article .container {
+   flex-grow: 1;
    display: grid;
    grid-template-rows: 1fr;
 }
@@ -281,10 +300,18 @@ article .inner-container-one > div:first-child {
 
 .inner-container-two {
    margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
 }
 
 .inner-container-two img {
    width: 5rem;
+}
+
+.container {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
 }
 
 .testimonials {
@@ -293,6 +320,7 @@ article .inner-container-one > div:first-child {
    display: flex;
    flex-direction: column;
    row-gap: 2rem;
+   flex-grow: 1;
 }
 
 .testimonials .profile {
